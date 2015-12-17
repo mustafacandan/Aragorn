@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.startapplabs.ionTheme-1" version="1.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>ionTheme_1</name>
+<widget id="com.rppig.aragorn" version="1.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Aragorn</name>
   <description>
     A FULL app template. Perfect as a starter project for Ionic Framework and Cordova.
   </description>
-  <author email="info@startapplabs.com" href="http://startapplabs.com/">
+  <author email="rppig42@gmail.com" href="http://rppig.me/">
     StartApp Labs Team
   </author>
   <content src="index.html"/>
