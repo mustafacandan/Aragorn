@@ -3,13 +3,14 @@ angular.module('underscore', [])
   return window._; // assumes underscore has already been loaded on the page
 });
 
-angular.module('your_app_name', [
+angular.module('Aragorn', [
   'ionic',
-  'your_app_name.common.directives',
-  'your_app_name.app.controllers',
-  'your_app_name.auth.controllers',
-  'your_app_name.app.services',
-  'your_app_name.views',
+  'Aragorn.config',
+  'Aragorn.common.directives',
+  'Aragorn.app.controllers',
+  'Aragorn.auth.controllers',
+  'Aragorn.app.services',
+  'Aragorn.views',
   'underscore',
   'angularMoment',
   'ngIOS9UIWebViewPatch'

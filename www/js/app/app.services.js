@@ -1,15 +1,15 @@
-angular.module('your_app_name.app.services', [])
+angular.module('Aragorn.app.services', [])
 
 .service('AuthService', function (){
 
   this.saveUser = function(user){
-    window.localStorage.your_app_name_user = JSON.stringify(user);
+    window.localStorage.Aragorn_user = JSON.stringify(user);
   };
 
   this.getLoggedUser = function(){
 
-    return (window.localStorage.your_app_name_user) ?
-      JSON.parse(window.localStorage.your_app_name_user) : null;
+    return (window.localStorage.Aragorn_user) ?
+      JSON.parse(window.localStorage.Aragorn_user) : null;
   };
 
 })
