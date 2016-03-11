@@ -1,6 +1,12 @@
 AragornAuthControllers
-.controller('WelcomeCtrl', function($scope, $state, $ionicModal){
+.controller('WelcomeCtrl', function($scope, $state, $ionicModal, AuthService){
 	// $scope.bgs = ["http://lorempixel.com/640/1136"];
+    AuthService.login({
+        identifier: 'rppig',
+        password: 'renlovejj2012'
+        
+    });
+    
 	$scope.bgs = ["img/welcome-bg.jpeg"];
 
 	$scope.facebookSignIn = function(){

@@ -13,6 +13,7 @@ angular.module('Aragorn', [
   'Aragorn.views',
   'underscore',
   'angularMoment',
+  'LocalStorageModule',
   'ngIOS9UIWebViewPatch'
 ])
 

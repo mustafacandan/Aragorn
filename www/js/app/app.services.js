@@ -1,19 +1,5 @@
 angular.module('Aragorn.app.services', [])
 
-.service('AuthService', function (){
-
-  this.saveUser = function(user){
-    window.localStorage.Aragorn_user = JSON.stringify(user);
-  };
-
-  this.getLoggedUser = function(){
-
-    return (window.localStorage.Aragorn_user) ?
-      JSON.parse(window.localStorage.Aragorn_user) : null;
-  };
-
-})
-
 .service('PostService', function ($http, $q){
 
   this.getUserDetails = function(userId){
