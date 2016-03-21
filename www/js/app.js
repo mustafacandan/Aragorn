@@ -49,6 +49,12 @@ angular.module('Aragorn', [
     templateUrl: "views/app/side-menu.html",
     controller: 'AppCtrl'
   })
+  
+  .state('app.index', {
+    url: "/index",
+    templateUrl: "views/auth/login.html",
+    controller: 'IndexCtrl'
+  })
 
   .state('app.feed', {
     url: "/feed",
@@ -204,10 +210,16 @@ angular.module('Aragorn', [
     templateUrl: "views/auth/welcome-back.html",
     controller: 'WelcomeBackCtrl'
   })
+  
+  .state('sign-in', {
+    url: "/sign-in",
+    templateUrl: "views/auth/login.html",
+    controller: 'LoginCtrl'
+  })
 ;
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/facebook-sign-in');
+  $urlRouterProvider.otherwise('/sign-in');
   // $urlRouterProvider.otherwise('/app/feed');
 })
 
