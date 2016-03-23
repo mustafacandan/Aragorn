@@ -1,21 +1,22 @@
-angular.module('Aragorn.app.controllers', [])
+var AragornAppControllers = angular.module('Aragorn.app.controllers', [])
 
 
 .controller('AppCtrl', function($scope, AuthService) {
 
   //this will represent our logged user
-  var user = {
-    about: "Design Lead of Project Fi. Love adventures, green tea, and the color pink.",
-    name: "Brynn Evans",
-    picture: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-    _id: 0,
-    followers: 345,
-    following: 58
-  };
+//   var user = {
+//     about: "Design Lead of Project Fi. Love adventures, green tea, and the color pink.",
+//     name: "Brynn Evans",
+//     picture: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
+//     _id: 0,
+//     followers: 345,
+//     following: 58
+//   };
 
-  //save our logged user on the localStorage
-  AuthService.saveUser(user);
-  $scope.loggedUser = user;
+//   //save our logged user on the localStorage
+//   AuthService.saveUser(user);
+//   $scope.loggedUser = user;
+    
 })
 
 
@@ -219,6 +220,8 @@ angular.module('Aragorn.app.controllers', [])
   };
 
 })
+
+
 
 
 

@@ -52,8 +52,12 @@ angular.module('Aragorn', [
   
   .state('app.index', {
     url: "/index",
-    templateUrl: "views/auth/login.html",
-    controller: 'IndexCtrl'
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/home.html",
+        controller: "IndexCtrl"
+      }
+    }
   })
 
   .state('app.feed', {
@@ -219,7 +223,7 @@ angular.module('Aragorn', [
 ;
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/sign-in');
+  $urlRouterProvider.otherwise('/app/index');
   // $urlRouterProvider.otherwise('/app/feed');
 })
 

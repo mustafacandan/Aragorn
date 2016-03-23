@@ -7,10 +7,6 @@ angular.module('Aragorn.auth.controllers', [])
     
     $scope.doLogIn = doLogIn;
     
-    
-    
-    
-    
     function doLogIn() {
         AuthService.login($scope.user)
             .then(function(res) {
