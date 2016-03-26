@@ -1,4 +1,4 @@
-angular.module('Aragorn.app.services', [])
+angular.module('Aragorn.app.services')
 
 .service('AuthService', function(CONFIG, $http, localStorageService) {
 

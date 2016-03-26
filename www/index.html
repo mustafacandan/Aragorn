@@ -10,6 +10,10 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/underscore/underscore-min.js"></script>
     <script src="lib/moment/moment.js"></script>
+    <script src="lib/sails.io.js/dist/sails.io.js"></script>
+    <script>
+        io.sails.url = 'http://desire.app:1337';
+    </script>
     <script src="lib/angular-moment/angular-moment.js"></script>
     <script src="lib/angular-local-storage/dist/angular-local-storage.min.js"></script>
     <script src="lib/angular-ios9-uiwebview-patch/angular-ios9-uiwebview-patch.js"></script>
@@ -30,14 +34,15 @@
     <script src="js/views.js"></script>
     
     <!--services-->
-    <script src="js/auth/auth.service.js"></script>
     
     <!-- app -->
     <script src="js/app/index.controller.js"></script>
+    <script src="js/app/control.service.js"></script>
+    
 
     <!-- auth -->
     <script src="js/auth/login.controller.js"></script>
-    
+    <script src="js/auth/auth.service.js"></script>
     
     
     

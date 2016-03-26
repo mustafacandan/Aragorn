@@ -1,28 +1,4 @@
-ion-nav-bar
-{
-	&.feed-color
-	{
-		ion-header-bar
-		{
-			background-color: $feed-bar-bg !important;
-			background: $feed-bar-bg !important;
-			border: none !important;
-			background-size: 0px !important; // To remove bottom border on header
-		}
-
-		*
-		{
-			color: $feed-bar-color;
-
-			.buttons button::before
-			{
-				color: $feed-bar-color;
-			}
-		}
-	}
-}
-
-.feed-view
+.app-view
 {
 	background-color: $feed-content-bg;
 

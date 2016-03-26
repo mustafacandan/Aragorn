@@ -143,6 +143,4 @@ angular.module('Aragorn.app.services', [])
 })
 
 
-
-
 ;

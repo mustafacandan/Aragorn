@@ -1,7 +1,7 @@
 var AragornAppControllers = angular.module('Aragorn.app.controllers', [])
 
 
-.controller('AppCtrl', function($scope, AuthService) {
+.controller('AppCtrl', function($scope) {
 
   //this will represent our logged user
 //   var user = {

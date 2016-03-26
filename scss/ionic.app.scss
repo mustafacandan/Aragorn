@@ -23,6 +23,7 @@
 @import "scss/profile/settings.variables";
 @import "scss/shop/shop.variables";
 @import "scss/feed/feed.variables";
+@import "scss/app/app.variables";
 
 // Include custom styles
 @import "scss/common/common.styles";
@@ -42,3 +43,4 @@
 @import "scss/shop/product-details.styles";
 @import "scss/shop/shipping-address.styles";
 @import "scss/shop/checkout.styles";
+@import "scss/app/app.styles";
