@@ -1,7 +1,5 @@
 angular.module('Aragorn.app.services')
-.service('ControlService', function() {
-
-  this.socket = io.sails.connect('http://desire.app:1337');
+.service('ControlService', function(CONFIG) {
 
   this.getAvaiableWidgets = function() {
     return {
@@ -33,6 +31,10 @@ angular.module('Aragorn.app.services')
         class: 'ion-arrow-graph-up-right'
       }
     }
+  };
+  
+  this.setWidgets = function(widgets) {
+      io.socket.post(CONFIG.API_ADDRESS + '/widgets', widgets);
   }
 
 });
