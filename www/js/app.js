@@ -59,6 +59,16 @@ angular.module('Aragorn', [
       }
     }
   })
+  
+  .state('app.display', {
+    url: "/display",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/display.html",
+        controller: "DisplayCtrl"
+      }
+    }
+  })
 
   .state('app.feed', {
     url: "/feed",

@@ -1,25 +1,12 @@
-AragornAppControllers.controller('displayCtrl', function($scope, ControlService, WeatherService, NewsService, StockService) {
+AragornAppControllers.controller('DisplayCtrl', function($scope, WidgetService, WeatherService, NewsService, StockService) {
+    
     $scope.widgets = {};
+    var socket = io.socket;
+    
+    WidgetService.registRoom();
 
-    $scope.avaliableWidgets = ControlService.getAvaiableWidgets();
-    var socket = ControlService.socket;
-
-    $scope.addWidget = function(name) {
-      $scope.widgets[name] = $scope.avaliableWidgets[name];
-    }
-
-    $scope.removeWidget = function(name) {
-      delete $scope.widgets[name];
-    }
-
-    socket.on('displayConnected', function (data) {
-      console.log('displayConnected');
-    });
-
-    socket.on('changeDisplayWidget', function (data) {
-      window.data = data;
+    socket.on('widgetChange', function (data) {
       $scope.widgets = data;
-      console.log(data);
       $scope.$apply();
     });
 
@@ -31,7 +18,6 @@ AragornAppControllers.controller('displayCtrl', function($scope, ControlService,
           widget.style.left = widget.style.left * 3.4;
         }
       }
-
 
       if(widgets.weather) {
         WeatherService.getWeather(widgets.weather.config.city)
@@ -55,5 +41,7 @@ AragornAppControllers.controller('displayCtrl', function($scope, ControlService,
       }
 
     });
+    
+
 
   });

@@ -1,17 +1,17 @@
 AragornAppControllers
-.controller('IndexCtrl', function($rootScope, ControlService) {
+.controller('IndexCtrl', function($rootScope, WidgetService) {
     $rootScope.widgets = {};
 
-    $rootScope.avaliableWidgets = ControlService.getAvaiableWidgets();
+    $rootScope.avaliableWidgets = WidgetService.getAvaiableWidgets();
     
     $rootScope.addWidget = function(name) {
       $rootScope.widgets[name] = $rootScope.avaliableWidgets[name];
-      ControlService.setWidgets($rootScope.widgets);
+      WidgetService.setWidgets($rootScope.widgets);
     };
 
     $rootScope.removeWidget = function(name) {
       delete $rootScope.widgets[name];
-      ControlService.setWidgets($rootScope.widgets);
+      WidgetService.setWidgets($rootScope.widgets);
     };
 
     io.socket.on('widgetChange', function() {

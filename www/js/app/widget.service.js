@@ -1,5 +1,5 @@
 angular.module('Aragorn.app.services')
-.service('ControlService', function(CONFIG, localStorageService) {
+.service('WidgetService', function(CONFIG, localStorageService) {
 
   this.getAvaiableWidgets = function() {
     return {
@@ -36,9 +36,16 @@ angular.module('Aragorn.app.services')
   this.setWidgets = function(widgets) {
       var data = {
           user: localStorageService.get('authData').userName,
-          data: widgets
+          data: widgets 
       }
       io.socket.post(CONFIG.API_ADDRESS + '/widgets', data);
+  }
+  
+  this.registRoom = function() {
+      var data = {
+          user: localStorageService.get('authData').userName
+      }
+      io.socket.post(CONFIG.API_ADDRESS + '/regist-room', data);
   }
 
 });

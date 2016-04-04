@@ -1,0 +1,64 @@
+<ion-view class="feed-view" view-title="Feed">
+    <ion-content>
+        
+        <div class="row">
+            <div class="col widget" ng-if="widgets.weather" ng-style="widgets.weather.style">
+                <div class="list card">
+                    <div class="item item-divider">{{ widgets.weather.title }}</div>
+                    <div class="item item-body">
+                        <div ng-if="!weather">
+                            加载中...
+                        </div>
+                        <div ng-if="weather">
+                            今天{{ widgets.weather.config.city }}白天天气为{{ weather[0].info.day[1] }}, 夜间天气为{{ weather[0].info.night[1] }}。
+                            <br> 明天{{ widgets.weather.config.city }}白天天气为{{ weather[1].info.day[1] }}, 夜间天气为{{ weather[1].info.night[1] }}。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col widget" ng-if="widgets.clock" ng-style="widgets.clock.style">
+                <div class="list card">
+                    <div class="item item-divider">{{ widgets.clock.title }}</div>
+                    <div class="item item-body">
+                        <div style="width: 300px; height: 300px; text-align: center">
+                            <ds-widget-clock theme="dark" show-secs="true" digital-format="'hh:mm:ss a'"></ds-widget-clock>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col widget" ng-if="widgets.news" ng-style="widgets.news.style">
+                <div class="list card">
+                    <div class="item item-divider">{{ widgets.news.title }}</div>
+                    <div class="item item-body">
+                        <div ng-if="!news">
+                            加载中...
+                        </div>
+                        <div ng-if="news">
+                            <ul>
+                                <li ng-repeat="newsItem in news">{{ newsItem }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col widget" ng-if="widgets.stock" ng-style="widgets.stock.style">
+                <div class="list card">
+                    <div class="item item-divider">{{ widgets.stock.title }}</div>
+                    <div class="item item-body">
+                        <div ng-if="!stock">
+                            加载中...
+                        </div>
+                        <div ng-if="stock">
+                            {{ stock.data.name }}, 价格 {{ stock.data.nowPri }}
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
