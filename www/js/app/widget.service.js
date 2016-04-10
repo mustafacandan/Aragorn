@@ -36,7 +36,7 @@ angular.module('Aragorn.app.services')
   this.setWidgets = function(widgets) {
       var data = {
           user: localStorageService.get('authData').userName,
-          data: widgets 
+          widgets: widgets 
       }
       io.socket.post(CONFIG.API_ADDRESS + '/widgets', data);
   }

@@ -4,6 +4,7 @@ angular.module('underscore', [])
 });
 
 angular.module('Aragorn', [
+  'ds.clock',
   'ionic',
   'Aragorn.config',
   'Aragorn.common.directives',
