@@ -61,6 +61,16 @@ angular.module('Aragorn', [
     }
   })
   
+  .state('app.widget-config', {
+    url: "/widget/:id",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/widgetConfig.html",
+        controller: "WidgetConfigCtrl"
+      }
+    }
+  })
+  
   .state('app.display', {
     url: "/display",
     views: {
