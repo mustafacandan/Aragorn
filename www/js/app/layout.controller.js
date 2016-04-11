@@ -1,4 +1,4 @@
-AragornAppControllers.controller('LayoutCtrl', function($scope, $rootScope, $ionicGesture, $state) {
+AragornAppControllers.controller('LayoutCtrl', function($scope, $rootScope, $ionicGesture, $state, WidgetService) {
 
   $scope.confirm = function() {
     for(var id in $rootScope.widgets) {
@@ -13,10 +13,9 @@ AragornAppControllers.controller('LayoutCtrl', function($scope, $rootScope, $ion
       }
     }
 
-    var socket = ControlService.socket;
+    WidgetService.setWidgets($rootScope.widgets);
 
-    socket.emit('controlWidgetChange', $rootScope.widgets);
-    $state.go('tab.control');
+    $state.go('app.control');
 
   }
 
