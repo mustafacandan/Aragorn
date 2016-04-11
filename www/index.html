@@ -9,11 +9,13 @@
     <link href="css/ionic.app.css" rel="stylesheet">
     <link href="lib/angular-ui-clock/dist/angular-clock.css" rel="stylesheet">
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/underscore/underscore-min.js"></script>
     <script src="lib/moment/moment.js"></script>
     <script src="lib/sails.io.js/dist/sails.io.js"></script>
     <script>
-        io.sails.url = 'http://desire.app:1337';
+        io.sails.url = 'http://188.166.231.171:1337';
+        // io.sails.url = 'http://desire.app:1337';
     </script>
     <script src="lib/angular-moment/angular-moment.js"></script>
     <script src="lib/angular-local-storage/dist/angular-local-storage.min.js"></script>
@@ -27,8 +29,9 @@
     <script src="js/app.js"></script>
     <script src="js/config.js"></script>
     
-    <!-- To be deleted-->
     <script src="js/common/common.directives.js"></script>
+    <script src="js/common/draggableWidget.directive.js"></script>
+    
     <script src="js/auth/auth.controllers.js"></script>
     <script src="js/auth/welcome.controller.js"></script>
     <script src="js/app/app.controllers.js"></script>
@@ -41,6 +44,7 @@
     <script src="js/app/index.controller.js"></script>
     <script src="js/app/display.controller.js"></script>
     <script src="js/app/widgetConfig.controller.js"></script>
+    <script src="js/app/layout.controller.js"></script>
     <script src="js/app/widget.service.js"></script>
     <script src="js/app/news.service.js"></script>
     <script src="js/app/weather.service.js"></script>

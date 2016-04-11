@@ -1,0 +1,12 @@
+<ion-view class="app-view layout-view" view-title="插件布局">
+  <ion-content class="padding">
+    <div class="container layout" draggable-widget draggable=".draggable-btn">
+      <div class="button draggable-btn" ng-style="widgetItem.style" id="{{ widgetItem.id }}" ng-repeat="widgetItem in widgets">{{ widgetItem.title.slice(0, 1) }}</div>
+    </div>
+
+    <a class="button button-block button-balanced" ng-click="confirm()">
+      确认更改
+    </a>
+
+  </ion-content>
+</ion-view>

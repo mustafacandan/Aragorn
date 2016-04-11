@@ -1,4 +1,4 @@
-angular.module('Aragorn.common.directives', [])
+var AragornCommonDirectives = angular.module('Aragorn.common.directives', [])
 
 .directive('multiBg', function(_){
 	return {
