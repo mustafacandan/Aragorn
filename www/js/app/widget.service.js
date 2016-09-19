@@ -1,5 +1,5 @@
 angular.module('Aragorn.app.services')
-.service('WidgetService', function(CONFIG, localStorageService) {
+.service('WidgetService', function(CONFIG, localStorageService, $http) {
 
   this.getAvaiableWidgets = function() {
     return {
@@ -18,29 +18,48 @@ angular.module('Aragorn.app.services')
         class: 'ion-clock'
       },
 
-      news: {
-        id: 'news',
-        title: '新闻',
-        class: 'ion-easel'
-
+      music: {
+        id: 'music',
+        title: '音乐',
+        class: 'ion-headphone'
       },
 
-      stock: {
-        id: 'stock',
-        title: '股票',
-        class: 'ion-arrow-graph-up-right'
+      greetings: {
+        id: 'greetings',
+        title: '问候',
+        class: 'ion-ios-heart'
       }
+
+      // news: {
+      //   id: 'news',
+      //   title: '新闻',
+      //   class: 'ion-easel'
+
+      // },
+
+      // stock: {
+      //   id: 'stock',
+      //   title: '股票',
+      //   class: 'ion-arrow-graph-up-right'
+      // }
     }
   };
-  
+
   this.setWidgets = function(widgets) {
       var data = {
           user: localStorageService.get('authData').userName,
-          widgets: widgets 
+          widgets: widgets
       }
       io.socket.post(CONFIG.API_ADDRESS + '/widgets', data);
   }
-  
+
+  // this.getWidgets = function() {
+  //     var data = {
+  //         user: localStorageService.get('authData').userName
+  //     }
+  //     console.log(io.socket.get(CONFIG.API_ADDRESS + '/widgets', data));
+  // }
+
   this.registRoom = function() {
       var data = {
           user: localStorageService.get('authData').userName
